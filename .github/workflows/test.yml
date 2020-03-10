@@ -10,10 +10,14 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+    - name: install and build   
     - uses: actions/checkout@v1
     - run: |
         npm install
         npm run build
+    - name: run action    
     - uses: ./
       with: 
         my-input: 'World'
+    - name: log action output
+    - run: echo steps.run_action.my-output     
