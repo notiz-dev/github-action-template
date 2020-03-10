@@ -1,13 +1,12 @@
 import * as core from '@actions/core';
 
 function run() {
-  const name: string = core.getInput('my-input');
+  const name: string = core.getInput('my_input');
   if (name) {
     core.debug(`Hello ${name}!`);
-    console.log(`Hello ${name}!`);
-    return core.setOutput('my-output', `Hello ${name}!`);
+    return core.setOutput('my_output', `Hello ${name}!`);
   }
-  core.setFailed('my-input not specified!');
+  core.setFailed('my_input not specified!');
 }
 
 run();
