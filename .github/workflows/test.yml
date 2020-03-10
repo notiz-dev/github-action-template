@@ -23,4 +23,4 @@ jobs:
         my-input: 'World'
 
     - name: log action output
-      run: echo ${{steps.run_action.my-output}}     
+      run: echo ${{steps.run_action.outputs.my-output}}     
