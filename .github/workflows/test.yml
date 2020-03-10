@@ -16,7 +16,8 @@ jobs:
         npm install
         npm run build
         
-    - name: run action    
+    - name: run action
+      id: run_action
       uses: ./
       with: 
         my-input: 'World'
